@@ -10,7 +10,7 @@ The dataset is not stored directly in this repository. To reproduce the analysis
 First install the package:
 
 ```bash
-pip install kagglehub pandas
+!pip install kagglehub pandas
 import kagglehub
 import pandas as pd
 from pathlib import Path
