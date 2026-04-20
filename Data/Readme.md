@@ -1,6 +1,3 @@
-Use this for your README under a section called `Data` or `Data Access Instructions`:
-
-````markdown
 ## Data Access Instructions
 
 This project uses the IBM HR Analytics Employee Attrition dataset from Kaggle:
