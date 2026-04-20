@@ -1,14 +1,14 @@
 P.R.I.M.E for Repository's Readme.md:
 
-P — PURPOSE
+PURPOSE
 
 Help me write a short, clean, and professional README.md for my ECON 3916 final project repository. The README should explain the project clearly, tell someone how to reproduce the checkpoint work, and briefly state what I plan to add for the final submission.
 
-R — ROLE
+ROLE
 
 Act as a concise technical writing assistant for a student GitHub repository. Write in clear markdown, keep the tone professional and simple, and do not overhype the project.
 
-I — INPUT
+INPUT
 
 Project title: ECON 3916 — Predicting Employee Attrition
 
@@ -43,7 +43,7 @@ Build a Streamlit dashboard
 Write a 5-page SCR report
 Add an AI Methodology Appendix using the P.R.I.M.E. framework
 
-M — METHOD
+METHOD
 
 Turn the information above into a GitHub README.md with the following sections:
 1. Title
@@ -58,7 +58,7 @@ Do not invent any results that are not in the input.
 Do not make causal claims.
 Use clean markdown only.
 
-E — EXPECTED OUTPUT
+EXPECTED OUTPUT
 
 Return one polished README.md in markdown format only.
 Do not include explanations, notes, or comments outside the README.
