@@ -59,7 +59,7 @@ df_raw, model, scaler, feature_cols, df_encoded, X_train = load_and_train()
 # Uses 200 iterations for Streamlit performance
 # ─────────────────────────────────────────────
 @st.cache_data
-def compute_bootstrap_models(n_boot=200, seed=42):
+def compute_bootstrap_models(n_boot=50, seed=42):
     """Fit n_boot logistic regression models on bootstrap samples of training data."""
     rng = np.random.default_rng(seed)
     boot_models = []
@@ -92,7 +92,8 @@ def compute_bootstrap_models(n_boot=200, seed=42):
 
     return boot_models
 
-boot_models = compute_bootstrap_models()
+with st.spinner("Loading model..."):
+    boot_models = compute_bootstrap_models()
 
 def bootstrap_prob_ci(input_df, boot_models, feature_cols):
     probs = []
@@ -162,8 +163,9 @@ def build_input_row(
     stock_option_level, years_in_current_role, years_with_curr_manager,
     df_encoded, feature_cols
 ):
-    base_row = df_encoded.drop(columns=['Attrition']).iloc[0:1].copy()
-    base_row[:] = 0
+    base_row = pd.DataFrame(
+        {col: [0] for col in df_encoded.drop(columns=['Attrition']).columns}
+    )
 
     # Numeric features
     numeric_map = {
